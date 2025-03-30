@@ -17,7 +17,7 @@ func Connect() {
 		trace.PushTrace(trace.ErrorFailedToConnectToMySql, map[string]interface{}{"error": err})
 		panic(err)
 	}
-	trace.PushTrace(trace.SuccessfullyConnectedToDatabase, map[string]interface{}{"error": err})
+	trace.PushTrace(trace.SuccessfullyConnectedToDatabase, nil)
 	db = d
 }
 

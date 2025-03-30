@@ -20,7 +20,30 @@ func init() {
 	db = config.GetDB()
 	err := db.AutoMigrate(&Book{})
 	if err != nil {
-		trace.PushTrace(trace.ErrorMigratingDatabases, nil)
+		trace.PushTrace(trace.ErrorMigratingDatabases, map[string]interface{}{"error": err})
 		panic(err)
 	}
+}
+
+func (b *Book) CreateBook() *Book {
+	db.Create(&b)
+	return b
+}
+
+func GetAllBooks() []Book {
+	var Books []Book
+	db.Find(&Books)
+	return Books
+}
+
+func GetBookById(id int64) (*Book, *gorm.DB) {
+	var getBook Book
+	newDbCon := db.Where("ID=?", id).Find(&getBook)
+	return &getBook, newDbCon
+}
+
+func DeleteBook(id int64) *Book {
+	book := &Book{}
+	_ = db.Where("ID=?", id).Delete(book)
+	return book
 }

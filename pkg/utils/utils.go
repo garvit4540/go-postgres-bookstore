@@ -15,7 +15,7 @@ func ParseBody(r *http.Request, x interface{}) {
 	}
 	err = json.Unmarshal([]byte(body), x)
 	if err != nil {
-		trace.PushTrace(trace.ErrorUnMarshallingBody, nil)
+		trace.PushTrace(trace.ErrorJsonMarshalUnMarshall, map[string]interface{}{"error": err})
 		panic(err)
 	}
 	return
