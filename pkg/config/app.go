@@ -1,8 +1,8 @@
 package config
 
 import (
-	"github.com/garvit4540/go-mysql-bookstore/pkg/trace"
-	"gorm.io/driver/mysql"
+	"github.com/garvit4540/go-postgres-bookstore/pkg/trace"
+	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
@@ -11,10 +11,10 @@ var (
 )
 
 func Connect() {
-	dsn := "bookstore_user:12345678@tcp(127.0.0.1:3306)/bookstore?charset=utf8mb4&parseTime=True&loc=Local"
-	d, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	dsn := "host=localhost user=bookstore_user password=12345678 dbname=bookstore port=5432 sslmode=disable TimeZone=Asia/Kolkata"
+	d, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
-		trace.PushTrace(trace.ErrorFailedToConnectToMySql, map[string]interface{}{"error": err})
+		trace.PushTrace(trace.ErrorFailedToConnectToPostgres, map[string]interface{}{"error": err})
 		panic(err)
 	}
 	trace.PushTrace(trace.SuccessfullyConnectedToDatabase, nil)

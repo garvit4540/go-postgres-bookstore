@@ -1,8 +1,8 @@
 package routes
 
 import (
-	controllers "github.com/garvit4540/go-mysql-bookstore/pkg/controllers"
-	"github.com/garvit4540/go-mysql-bookstore/pkg/utils"
+	controllers "github.com/garvit4540/go-postgres-bookstore/pkg/controllers"
+	"github.com/garvit4540/go-postgres-bookstore/pkg/utils"
 	"github.com/gorilla/mux"
 )
 

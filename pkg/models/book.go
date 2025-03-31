@@ -1,8 +1,8 @@
 package models
 
 import (
-	"github.com/garvit4540/go-mysql-bookstore/pkg/config"
-	"github.com/garvit4540/go-mysql-bookstore/pkg/trace"
+	"github.com/garvit4540/go-postgres-bookstore/pkg/config"
+	"github.com/garvit4540/go-postgres-bookstore/pkg/trace"
 	"gorm.io/gorm"
 )
 

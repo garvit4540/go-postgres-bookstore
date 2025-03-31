@@ -2,9 +2,9 @@ package controllers
 
 import (
 	"encoding/json"
-	"github.com/garvit4540/go-mysql-bookstore/pkg/models"
-	"github.com/garvit4540/go-mysql-bookstore/pkg/trace"
-	"github.com/garvit4540/go-mysql-bookstore/pkg/utils"
+	"github.com/garvit4540/go-postgres-bookstore/pkg/models"
+	"github.com/garvit4540/go-postgres-bookstore/pkg/trace"
+	"github.com/garvit4540/go-postgres-bookstore/pkg/utils"
 	"github.com/gorilla/mux"
 	"net/http"
 	"strconv"

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/garvit4540/go-mysql-bookstore/pkg/routes"
-	"github.com/garvit4540/go-mysql-bookstore/pkg/trace"
+	"github.com/garvit4540/go-postgres-bookstore/pkg/routes"
+	"github.com/garvit4540/go-postgres-bookstore/pkg/trace"
 	"github.com/gorilla/mux"
 	"net/http"
 )

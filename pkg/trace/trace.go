@@ -24,9 +24,9 @@ const (
 
 // Errors
 const (
-	ErrorMigratingDatabases     = "ERROR_MIGRATING_DATABASES"
-	ErrorReadingBody            = "ERROR_READING_BODY"
-	ErrorJsonMarshalUnMarshall  = "ERROR_JSON_MARSHALL_UN_MARSHALL"
-	ErrorFailedToConnectToMySql = "ERROR_FAILED_TO_CONNECT_TO_MYSQL"
-	ErrorStartingApp            = "ERROR_STARTING_APP"
+	ErrorMigratingDatabases        = "ERROR_MIGRATING_DATABASES"
+	ErrorReadingBody               = "ERROR_READING_BODY"
+	ErrorJsonMarshalUnMarshall     = "ERROR_JSON_MARSHALL_UN_MARSHALL"
+	ErrorFailedToConnectToPostgres = "ERROR_FAILED_TO_CONNECT_TO_POSTGRES"
+	ErrorStartingApp               = "ERROR_STARTING_APP"
 )

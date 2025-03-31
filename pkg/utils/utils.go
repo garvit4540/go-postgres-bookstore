@@ -2,7 +2,7 @@ package utils
 
 import (
 	"encoding/json"
-	"github.com/garvit4540/go-mysql-bookstore/pkg/trace"
+	"github.com/garvit4540/go-postgres-bookstore/pkg/trace"
 	"io"
 	"net/http"
 )
